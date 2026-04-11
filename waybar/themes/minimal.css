@@ -1,0 +1,40 @@
+@import "file:///home/matyas/.config/waybar/colors.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+#workspaces button {
+    color: rgba(255,255,255,0.4);
+    padding: 0 6px;
+    background: transparent;
+}
+
+#workspaces button.active {
+    color: @sky;
+}
+
+#clock {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#network, #pulseaudio, #battery, #custom-swaync {
+    color: rgba(255,255,255,0.6);
+    padding: 0 8px;
+    font-size: 15px;
+}
+
+#tray { padding: 0 6px; }
