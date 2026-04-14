@@ -1,0 +1,76 @@
+@import url("file:///home/matyas/.cache/wal/colors-waybar.css");
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+#waybar {
+background: alpha(@background, 0.65);
+border-radius: 16px;
+border: 1px solid alpha(@foreground, 0.15);
+box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+color: @foreground;
+padding: 0 8px;
+margin: 8px 8px 0 8px;
+}
+
+/* Modules */
+.modules-left, .modules-center, .modules-right {
+    padding: 0 6px;
+}
+
+/* Workspaces */
+#workspaces button {
+padding: 4px 12px;
+margin: 4px 2px;
+border-radius: 10px;
+color: @foreground;
+background: transparent;
+transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+background: alpha(@color5, 0.25);
+}
+
+#workspaces button.active {
+background: @color5;
+color: @background;
+font-weight: 700;
+}
+
+/* Clock */
+#clock {
+padding: 0 16px;
+background: alpha(@background, 0.4);
+border-radius: 12px;
+margin: 4px 6px;
+}
+
+/* Right side modules */
+#pulseaudio, #network, #cpu, #memory, #battery, #tray {
+padding: 0 12px;
+margin: 4px 2px;
+border-radius: 12px;
+background: alpha(@background, 0.4);
+}
+
+#battery.warning { color: #f38ba8; }
+#battery.critical { color: #f38ba8; }
+
+/* Hover effects */
+#pulseaudio:hover, #network:hover, #cpu:hover, #memory:hover, #battery:hover {
+background: alpha(@color5, 0.25);
+}
+
+/* Tray icons */
+#tray menu {
+background: @background;
+border: 1px solid alpha(@foreground, 0.2);
+border-radius: 12px;
+}

@@ -1,0 +1,23 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "margin-top": 8,
+    "margin-left": 20,
+    "margin-right": 20,
+    "spacing": 10,
+    "modules-left": ["custom/arch", "hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["mpris", "network", "pulseaudio", "cpu", "memory", "battery", "custom/swaync"],
+
+    "custom/arch": { "format": "󰣇", "tooltip": false },
+    "hyprland/workspaces": { "format": "{name}", "on-click": "activate" },
+    "clock": { "format": "{:%I:%M %p}" },
+    "mpris": { "format": "󰎜 {title}", "max-length": 25 },
+    "network": { "format-wifi": "󰖩 {essid}" },
+    "pulseaudio": { "format": "{icon} {volume}%", "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] } },
+    "cpu": { "format": "󰻠 {usage}%" },
+    "memory": { "format": "󰍛 {percentage}%" },
+    "battery": { "format": "{icon} {capacity}%", "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"] },
+    "custom/swaync": { "format": "󰂚" }
+}

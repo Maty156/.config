@@ -1,0 +1,28 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 11px;
+    color: @foreground;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+#workspaces button {
+    background: transparent;
+    padding: 0 6px;
+    opacity: 0.5;
+}
+
+#workspaces button.active {
+    opacity: 1;
+}
+
+#clock {
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+#battery {
+    opacity: 0.6;
+}

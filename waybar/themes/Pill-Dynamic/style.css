@@ -1,0 +1,30 @@
+@import "../../colors.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+#custom-arch, #workspaces, #clock, #mpris, #network, #pulseaudio, #backlight, #cpu, #memory, #battery, #custom-swaync {
+    background: alpha(@base, 0.7);
+    color: @text;
+    border: 1px solid alpha(@sky, 0.3);
+    border-radius: 12px;
+    padding: 0 10px;
+    margin: 4px 5px;
+}
+
+#workspaces button.active {
+    color: @sky;
+}
+
+#network { color: @sky; }
+#pulseaudio { color: @blue; }
+#cpu { color: @red; }
+#memory { color: @yellow; }
+#battery { color: @green; }
