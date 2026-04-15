@@ -1,7 +1,7 @@
 #!/bin/bash
 export LD_PRELOAD=/usr/lib/libgtk4-layer-shell.so
-cd ~/Matuwall
-source .venv/bin/activate
+cd ~/.config/matuwall/
+source venv/bin/activate
 
 # Try toggle first
 matuwall --toggle 2>/dev/null
@@ -10,3 +10,4 @@ matuwall --toggle 2>/dev/null
 if [ $? -ne 0 ]; then
     matuwall &
 fi
+

@@ -28,3 +28,5 @@ while true; do
     fi
     sleep 1
 done
+
+killall waybar && waybar &
