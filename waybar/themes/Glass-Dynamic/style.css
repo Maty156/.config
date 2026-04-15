@@ -1,4 +1,8 @@
-@import "../../colors.css";
+/* =========================================================
+   Glass Dynamic — Transparent floating bar with pywal colors
+   ========================================================= */
+
+@import "../colors.css";
 
 * {
     font-family: "JetBrainsMono Nerd Font", monospace;
@@ -10,72 +14,87 @@
     transition: all 0.2s ease;
 }
 
-/* ── Bar ─────────────────────────────────────── */
 window#waybar {
-    background: rgba(10, 10, 20, 0.45);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
+    background: transparent;
+    border: none;
     color: rgba(220, 220, 235, 0.90);
-    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.45),
-                inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
-/* ── Workspaces ──────────────────────────────── */
 #workspaces {
     margin: 3px 0 3px 4px;
     padding: 0 3px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 12px;
 }
 
 #workspaces button {
     padding: 0 5px;
     color: rgba(180, 180, 200, 0.45);
     background: transparent;
-    border-radius: 7px;
-    min-width: 0;
+    border-radius: 8px;
 }
 
 #workspaces button.active {
     color: @sky;
-    background: rgba(255, 255, 255, 0.10);
-    box-shadow: 0 0 10px rgba(140, 180, 255, 0.20);
+    background: rgba(255, 255, 255, 0.12);
 }
 
 #workspaces button.urgent {
-    color: rgba(255, 100, 120, 0.95);
-    background: rgba(255, 80, 100, 0.12);
+    color: @red;
 }
 
 #workspaces button:hover {
-    color: rgba(220, 220, 255, 0.85);
-    background: rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
 }
 
-/* ── Specific Modules ───────────────────────── */
 #clock {
     font-size: 14px;
     font-weight: bold;
-    color: @text;
-    padding: 0 12px;
+    letter-spacing: 1px;
+    color: white;
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 12px;
+    padding: 0 16px;
+    margin: 3px 1px;
 }
 
-#mpris, #network, #pulseaudio, #cpu, #memory, #battery, #tray, #custom-swaync, #custom-arch {
+#mpris,
+#network,
+#pulseaudio,
+#cpu,
+#memory,
+#battery,
+#tray,
+#custom-swaync {
     margin: 3px 1px;
     padding: 0 7px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 12px;
     color: rgba(200, 205, 220, 0.88);
 }
 
-/* ── Dynamic Colors ──────────────────────────── */
-#mpris { color: @green; }
 #network { color: @sky; }
 #pulseaudio { color: @sapphire; }
 #cpu { color: @yellow; }
 #memory { color: @green; }
 #battery { color: @green; }
-#custom-arch { color: @sky; font-size: 14px; }
-#custom-swaync { color: @sky; }
+#battery.warning:not(.charging) { color: @yellow; }
+#battery.critical:not(.charging) { color: @red; }
+#mpris { color: @green; }
+#custom-swaync { color: @sky; font-size: 14px; }
+
+#custom-arch {
+    font-size: 16px;
+    padding: 0 10px;
+    color: @sky;
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 12px;
+    margin: 3px 1px;
+}
+
+#tray { padding: 0 8px; }

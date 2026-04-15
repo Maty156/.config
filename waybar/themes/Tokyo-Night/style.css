@@ -1,41 +1,92 @@
-@import "../../colors.css";
+/* =========================================================
+   Tokyo Night — Dark blue cyberpunk theme
+   ========================================================= */
 
 * {
     font-family: "JetBrainsMono Nerd Font", monospace;
     font-size: 11px;
     font-weight: 500;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
     transition: all 0.2s ease;
 }
 
 window#waybar {
-    background: alpha(@bg, 0.85);
-    color: @fg;
-    border: 1px solid alpha(@fg, 0.1);
-    border-radius: 12px;
+    background: rgba(26, 27, 38, 0.95);
+    border: 1px solid rgba(86, 95, 137, 0.4);
+    border-radius: 16px;
+    color: #a9b1d6;
+}
+
+#workspaces {
+    margin: 3px 0 3px 4px;
+    padding: 0 3px;
+    background: rgba(36, 40, 59, 0.9);
+    border: 1px solid rgba(86, 95, 137, 0.3);
+    border-radius: 10px;
 }
 
 #workspaces button {
     padding: 0 5px;
-    color: alpha(@fg, 0.4);
+    color: #565f89;
+    background: transparent;
+    border-radius: 7px;
 }
 
 #workspaces button.active {
-    color: @blue;
-    background: alpha(@fg, 0.05);
+    color: #7aa2f7;
+    background: rgba(122, 162, 247, 0.15);
 }
 
-#clock, #battery, #cpu, #memory, #network, #pulseaudio, #tray, #mpris, #custom-swaync, #custom-arch {
-    padding: 0 8px;
+#workspaces button.urgent {
+    color: #f7768e;
+}
+
+#workspaces button:hover {
+    background: rgba(86, 95, 137, 0.2);
+    color: #a9b1d6;
+}
+
+#clock {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #c0caf5;
+    background: transparent;
+    padding: 0 12px;
+}
+
+#mpris,
+#network,
+#pulseaudio,
+#cpu,
+#memory,
+#battery,
+#tray,
+#custom-swaync {
     margin: 3px 1px;
-    background: alpha(@black, 0.5);
-    border-radius: 6px;
+    padding: 0 7px;
+    background: rgba(36, 40, 59, 0.9);
+    border: 1px solid rgba(86, 95, 137, 0.3);
+    border-radius: 8px;
+    color: #a9b1d6;
 }
 
-#custom-arch { color: @blue; }
-#clock { color: @magenta; font-weight: bold; }
-#network { color: @blue; }
-#pulseaudio { color: @green; }
-#cpu { color: @red; }
-#memory { color: @yellow; }
-#battery { color: @green; }
-#custom-swaync { color: @magenta; }
+#network { color: #7aa2f7; }
+#pulseaudio { color: #7dcfff; }
+#cpu { color: #e0af68; }
+#memory { color: #9ece6a; }
+#battery { color: #9ece6a; }
+#battery.warning:not(.charging) { color: #e0af68; }
+#battery.critical:not(.charging) { color: #f7768e; }
+#mpris { color: #9ece6a; }
+#custom-swaync { color: #7aa2f7; font-size: 14px; }
+
+#custom-arch {
+    font-size: 16px;
+    padding: 0 10px;
+    color: #7aa2f7;
+}
+
+#tray { padding: 0 8px; }

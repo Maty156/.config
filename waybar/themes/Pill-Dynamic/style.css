@@ -1,30 +1,101 @@
-@import "../../colors.css";
+/* =========================================================
+   Pill Dynamic — Floating separate pills per module
+   ========================================================= */
+
+@import "../colors.css";
 
 * {
-    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-family: "JetBrainsMono Nerd Font", monospace;
     font-size: 11px;
-    font-weight: 800;
+    font-weight: 500;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    transition: all 0.2s ease;
 }
 
 window#waybar {
     background: transparent;
+    border: none;
+    color: rgba(220, 220, 235, 0.90);
 }
 
-#custom-arch, #workspaces, #clock, #mpris, #network, #pulseaudio, #backlight, #cpu, #memory, #battery, #custom-swaync {
-    background: alpha(@base, 0.7);
-    color: @text;
-    border: 1px solid alpha(@sky, 0.3);
-    border-radius: 12px;
-    padding: 0 10px;
-    margin: 4px 5px;
+#workspaces {
+    margin: 6px 0 0 6px;
+    padding: 0 6px;
+    background: rgba(10, 10, 20, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 20px;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    color: rgba(180, 180, 200, 0.45);
+    background: transparent;
+    border-radius: 16px;
 }
 
 #workspaces button.active {
     color: @sky;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+}
+
+#clock {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    background: rgba(10, 10, 20, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 20px;
+    padding: 0 16px;
+    margin: 6px 0 0 0;
+}
+
+#mpris,
+#network,
+#pulseaudio,
+#cpu,
+#memory,
+#battery,
+#custom-swaync {
+    margin: 6px 2px 0 2px;
+    padding: 0 10px;
+    background: rgba(10, 10, 20, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 20px;
+    color: rgba(200, 205, 220, 0.88);
+}
+
+#tray {
+    margin: 6px 6px 0 2px;
+    padding: 0 8px;
+    background: rgba(10, 10, 20, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 20px;
 }
 
 #network { color: @sky; }
-#pulseaudio { color: @blue; }
-#cpu { color: @red; }
-#memory { color: @yellow; }
+#pulseaudio { color: @sapphire; }
+#cpu { color: @yellow; }
+#memory { color: @green; }
 #battery { color: @green; }
+#battery.warning:not(.charging) { color: @yellow; }
+#battery.critical:not(.charging) { color: @red; }
+#mpris { color: @green; }
+#custom-swaync { color: @sky; font-size: 14px; }
+
+#custom-arch {
+    font-size: 16px;
+    padding: 0 10px;
+    color: @sky;
+    background: rgba(10, 10, 20, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 20px;
+    margin: 6px 0 0 6px;
+}
