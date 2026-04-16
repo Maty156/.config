@@ -9,10 +9,9 @@ border: none;
 window#waybar {
     background: rgba(20, 20, 20, 0.6);
     backdrop-filter: blur(20px);
-
     border-radius: 14px;
-
     margin: 6px 10px;
+    padding: 8px 12px;
 }
 
 /* MODULES */
@@ -21,11 +20,19 @@ window#waybar {
 padding: 0 8px;
 border-radius: 10px;
 color: #ccc;
+transition: all 0.3s ease;
+margin: 0 4px;
 }
 
 #workspaces button.active {
-background: rgba(255,255,255,0.2);
+background: rgba(255, 255, 255, 0.2);
 color: white;
+box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+#workspaces button:hover {
+background: rgba(255, 255, 255, 0.1);
+color: #fff;
 }
 
 /* CENTER CLOCK */
@@ -33,6 +40,7 @@ color: white;
 #clock {
 font-weight: 600;
 color: white;
+margin: 0 10px;
 }
 
 /* RIGHT SIDE */
@@ -42,6 +50,7 @@ color: white;
 #battery {
 padding: 0 10px;
 color: #ddd;
+transition: all 0.2s ease;
 }
 
 /* HOVER */
@@ -49,6 +58,21 @@ color: #ddd;
 #pulseaudio:hover,
 #network:hover,
 #battery:hover {
-background: rgba(255,255,255,0.15);
+background: rgba(255, 255, 255, 0.15);
 border-radius: 10px;
+color: white;
+}
+
+/* ACTIVE/CRITICAL STATES */
+
+#battery.critical {
+color: #ff6b6b;
+}
+
+#network.disconnected {
+color: #ff8787;
+}
+
+#pulseaudio.muted {
+color: #888;
 }
