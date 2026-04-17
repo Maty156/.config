@@ -49,7 +49,7 @@ A clean, modern, and highly polished **Hyprland** setup featuring **glassmorphis
 ### Desktop Overview
 
 <p align="center">
-  <img src="assets/desktop.png" alt="Desktop" width="85%">
+  <img src="assets/desktop1.png" alt="Desktop" width="85%">
 </p>
 
 ### Wallpaper Picker & Launcher
