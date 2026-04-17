@@ -19,7 +19,7 @@
 | ![Wofi](assets/wofi.png)
 
 | Wallpaper Picker |
-| ![Picker](assets/preview-pick.png)
+| ![Picker](assets/picker.png)
 | Fastfetch 
 | ![Fastfetch](assets/fastfetch.png) 
 
