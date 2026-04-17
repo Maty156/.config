@@ -19,7 +19,7 @@ while true; do
         sudo cp "$CURRENT" /usr/share/sddm/themes/catppuccin/backgrounds/current-wall.jpg 2>/dev/null
         bash ~/.config/hypr/scripts/sddm-colors.sh
         hyprctl reload 2>/dev/null
-        killall waybar 2>/dev/null; waybar &
+        pkill -x waybar
         pkill dunst 2>/dev/null; dunst &
         pkill wob 2>/dev/null
         rm -f /tmp/wobpipe
@@ -28,5 +28,3 @@ while true; do
     fi
     sleep 1
 done
-
-killall waybar && waybar &
