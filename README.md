@@ -57,7 +57,7 @@ A clean, modern, and highly polished **Hyprland** setup featuring **glassmorphis
 <table align="center">
   <tr>
     <td align="center"><strong>Wallpaper Picker</strong><br><img src="assets/picker.png" width="420"></td>
-    <td align="center"><strong>Wofi Launcher</strong><br><img src="assets/wofi.png" width="420"></td>
+    <td align="center"><strong>Wofi Launcher</strong><br><img src="assets/wofi1.png" width="420"></td>
   </tr>
 </table>
 
