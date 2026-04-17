@@ -1,192 +1,244 @@
-```
-███╗   ███╗ █████╗ ███████╗██╗   ██╗
-████╗ ████║██╔══██╗██╔════╝██║   ██║
-██╔████╔██║███████║███████╗██║   ██║
-██║╚██╔╝██║██╔══██║╚════██║██║   ██║
-██║ ╚═╝ ██║██║  ██║███████║╚██████╔╝
-╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝ ╚═════╝
-```
+<div align="center">
 
-**by [Matyas Abraham (Maty156)](https://github.com/Maty156)**
+# 🪟 Matyas' Hyprland Rice
 
----
+[![Hyprland](https://img.shields.io/badge/Hyprland-0.45-blue?logo=linux\&logoColor=white)](https://hyprland.org/)
+[![Wayland](https://img.shields.io/badge/Wayland-native-green?logo=wayland\&logoColor=white)](https://wayland.freedesktop.org/)
+[![Pywal](https://img.shields.io/badge/pywal-dynamic-ff69b4)](https://github.com/eylles/pywal16)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Screenshots
+A clean, modern, and highly polished **Hyprland** setup featuring **glassmorphism**, dynamic **pywal** theming, smooth animations, and seamless wallpaper integration.
 
-| Desktop |
-| ![Desktop](assets/desktop.png) |
-| Wofi Launcher
-| ![Wofi](assets/wofi.png)
+**Created by [Matyas Abraham (Maty156)](https://github.com/Maty156)**
 
-| Wallpaper Picker |
-| ![Picker](assets/picker.png)
-| Fastfetch 
-| ![Fastfetch](assets/fastfetch.png) 
+</div>
 
 ---
 
-## What's in the .config file
+## 📑 Table of Contents
 
-- 💎 **Glassmorphism** — refined Waybar with smoother blurs and glowing borders
-- 📏 **Smart Gaps** — auto-hide gaps when only one window is open
-- ✦ **Matuwall panel picker** — wallpaper picker from the left edge (`SUPER+W`)
-- ✦ **Full pywal pipeline** — everything follows your wallpaper automatically
-- ✦ **awww wallpaper daemon** — smooth transitions and persistence
-- ✦ **Hyprlock** — lock screen always syncs with current wallpaper
-- **SDDM** — login screen matches your wallpaper and pywal colors
-- **Smooth animations** — fluid window animations with bezier curves
-- **Wallpaper persistence** — last wallpaper restores on every reboot
-- **Volume & brightness OSD** — wob overlay bar for media keys
-
----
-
-## Dependencies
-
-| Package | Purpose |
-|---------|---------|
-| `hyprland` | Window manager |
-| `hyprlock` | Lock screen |
-| `waybar` | Status bar |
-| `wofi` | App launcher |
-| `awww` | Wallpaper daemon |
-| `matuwall` | GTK4 wallpaper picker panel |
-| `swaync` | Notifications |
-| `kitty` | Terminal |
-| `python-pywal` | Dynamic color scheme generator |
-| `wob` | Volume/brightness OSD |
-| `rofi-wayland` | Application launcher |
-| `grim` + `slurp` | Screenshots |
-| `brightnessctl` | Brightness control |
-| `playerctl` | Media control |
-| `thunar` | File manager |
-| `pavucontrol` | Audio control |
-| `ttf-jetbrains-mono-nerd` | Font |
-| `gtk4` + `libadwaita` + `gtk-layer-shell` | Matuwall dependencies |
-| `jq` | JSON parsing |
-| `imagemagick` | Image processing |
+* [✨ Features](#-features)
+* [📸 Screenshots](#-screenshots)
+* [📦 What's Included](#-whats-included)
+* [🛠️ Dependencies & Installation](#️-dependencies--installation)
+* [🚀 Quick Setup](#-quick-setup)
+* [⌨️ Keybindings](#️-keybindings)
+* [🎨 Color Pipeline](#-color-pipeline)
+* [🖼️ Adding Wallpapers](#️-adding-wallpapers)
+* [📁 Directory Structure](#-directory-structure)
+* [📄 License](#-license)
 
 ---
 
-## Installation
+## ✨ Features
+
+* 💎 **Glassmorphism** — Elegant Waybar with smooth blurs and glowing borders
+* 📏 **Smart Gaps** — Automatically hide gaps when only one window is open
+* ✦ **Matuwall Panel Picker** — Beautiful wallpaper picker sliding from the left (`SUPER + W`)
+* 🎨 **Full pywal Pipeline** — All components update automatically with your wallpaper
+* 🌄 **awww Wallpaper Daemon** — Smooth transitions + persistence across reboots
+* 🔒 **Hyprlock** — Lock screen always matches the current wallpaper
+* 🖥️ **SDDM** — Login screen synced with pywal colors and wallpaper
+* ⚡ **Fluid Animations** — Beautiful bezier curves for windows and menus
+* 🔊 **Volume & Brightness OSD** — Clean `wob` overlay for media keys
+
+---
+
+## 📸 Screenshots
+
+### Desktop Overview
+
+<p align="center">
+  <img src="assets/desktop.png" alt="Desktop" width="85%">
+</p>
+
+### Wallpaper Picker & Launcher
+
+<table align="center">
+  <tr>
+    <td align="center"><strong>Wallpaper Picker</strong><br><img src="assets/picker.png" width="420"></td>
+    <td align="center"><strong>Wofi Launcher</strong><br><img src="assets/wofi.png" width="420"></td>
+  </tr>
+</table>
+
+### Fastfetch
+
+<p align="center">
+  <img src="assets/fastfetch.png" alt="Fastfetch" width="75%">
+</p>
+
+---
+
+## 📦 What's Included
+
+This repo contains my full `~/.config/` for a refined Hyprland experience, including:
+
+* Modular Hyprland configuration
+* Glassmorphism-styled Waybar
+* Wofi + Rofi-wayland launchers
+* Swaync notifications
+* Hyprlock configuration
+* Matuwall wallpaper picker
+* awww daemon + pywal integration scripts
+* Fastfetch config and more
+
+---
+
+## 🛠️ Dependencies & Installation
+
+### Core Packages (required)
+
+| Package                   | Purpose          |
+| ------------------------- | ---------------- |
+| `hyprland`                | Window manager   |
+| `hyprlock`                | Lock screen      |
+| `waybar`                  | Status bar       |
+| `wofi`                    | App launcher     |
+| `awww`                    | Wallpaper daemon |
+| `matuwall`                | Wallpaper picker |
+| `swaync`                  | Notifications    |
+| `kitty`                   | Terminal         |
+| `python-pywal`            | Color generator  |
+| `wob`                     | OSD              |
+| `rofi-wayland`            | Launcher         |
+| `grim` + `slurp`          | Screenshots      |
+| `brightnessctl`           | Brightness       |
+| `playerctl`               | Media control    |
+| `thunar`                  | File manager     |
+| `pavucontrol`             | Audio            |
+| `ttf-jetbrains-mono-nerd` | Font             |
+| `gtk4` + `libadwaita`     | UI deps          |
+| `jq`                      | JSON             |
+| `imagemagick`             | Image tools      |
+
+### Arch Linux
 
 ```bash
-git clone https://github.com/Maty156/.config
+sudo pacman -S hyprland hyprlock waybar wofi awww swaync kitty python-pywal wob rofi-wayland grim slurp brightnessctl playerctl thunar pavucontrol ttf-jetbrains-mono-nerd gtk4 libadwaita gtk-layer-shell jq imagemagick
+```
+
+### Pywal
+
+```bash
+pip install pywal16
+```
+
+---
+
+## 🚀 Quick Setup
+
+```bash
+git clone https://github.com/Maty156/.config.git
 cd .config
 
+cp -r ~/.config ~/.config-backup-$(date +%Y%m%d)
+cp -r .config/* ~/.config/
 ```
 
-## Keybindings
+### After setup:
 
-| Key | Action |
-|-----|--------|
-| `SUPER + Q` | Terminal (kitty) |
-| `SUPER + SPACE` | App launcher (wofi) |
-| `SUPER + W` | Wallpaper picker (matuwall panel) |
-| `SUPER + E` | File manager (thunar) |
-| `SUPER + C` | Close window |
-| `SUPER + F` | Fullscreen |
-| `SUPER + V` | Toggle floating |
-| `SUPER + SHIFT + V` | Float + center + resize to 900×600 |
-| `SUPER + L` | Lock screen |
-| `SUPER + Delete` | Lock + sleep |
-| `SUPER + M` | Exit Hyprland |
-| `SUPER + S` | Scratchpad |
-| `SUPER + 1-0` | Switch workspace |
-| `SUPER + SHIFT + 1-0` | Move window to workspace |
-| `SUPER + arrows` | Move focus |
-| `SUPER + SHIFT + arrows` | Move window |
-| `SUPER + ALT + arrows` | Resize window |
-| `Print` | Screenshot (fullscreen) |
-| `SUPER + Print` | Screenshot (area select) |
-| `XF86AudioRaiseVolume` | Volume up + OSD |
-| `XF86AudioLowerVolume` | Volume down + OSD |
-| `XF86AudioMute` | Mute + OSD |
-| `XF86MonBrightnessUp` | Brightness up + OSD |
-| `XF86MonBrightnessDown` | Brightness down + OSD |
+1. Install dependencies
+2. Log out → choose **Hyprland**
+3. Press `SUPER + W` to pick wallpaper
+
+📁 Wallpapers go in: `~/wallpapers/`
 
 ---
 
-## Pywal Color Pipeline
+## ⌨️ Keybindings
 
-When you pick a wallpaper with `SUPER+W`, the following update automatically:
+### Basic
 
-```
-Wallpaper selected (matuwall)
-        │
-        ▼
-   awww sets wallpaper
-        │
-        ▼
-   pywal generates colors
-        │
-        ├──▶ Waybar module colors
-        ├──▶ Wofi launcher colors
-        ├──▶ Swaync notification colors
-        ├──▶ Hyprland border color
-        ├──▶ Hyprlock wallpaper
-        ├──▶ SDDM login screen wallpaper + colors
-        ├──▶ wob OSD colors
-        └──▶ Terminal colors (cmatrix, cava, etc.)
-```
+| Key                 | Action           |
+| ------------------- | ---------------- |
+| `SUPER + Q`         | Terminal         |
+| `SUPER + SPACE`     | Launcher         |
+| `SUPER + W`         | Wallpaper picker |
+| `SUPER + E`         | File manager     |
+| `SUPER + C`         | Close            |
+| `SUPER + F`         | Fullscreen       |
+| `SUPER + V`         | Float            |
+| `SUPER + SHIFT + V` | Center float     |
+| `SUPER + L`         | Lock             |
+| `SUPER + M`         | Exit             |
+
+### Workspaces
+
+| Key                   | Action      |
+| --------------------- | ----------- |
+| `SUPER + 1-0`         | Switch      |
+| `SUPER + SHIFT + 1-0` | Move window |
+
+### Window Control
+
+| Key                      | Action |
+| ------------------------ | ------ |
+| `SUPER + Arrows`         | Focus  |
+| `SUPER + SHIFT + Arrows` | Move   |
+| `SUPER + ALT + Arrows`   | Resize |
+
+### Media
+
+| Key             | Action            |
+| --------------- | ----------------- |
+| `Print`         | Screenshot        |
+| `SUPER + Print` | Area screenshot   |
+| Media Keys      | Volume/Brightness |
 
 ---
 
-## Adding Wallpapers
+## 🎨 Color Pipeline
 
-Drop any `.jpg`, `.png`, `.webp` images into `~/wallpapers/` then press `SUPER+W` to open the picker. The panel slides in from the left — click a thumbnail to apply instantly.
+```mermaid
+flowchart TD
+    A[Wallpaper] --> B[awww]
+    B --> C[pywal]
+    C --> D[Waybar]
+    C --> E[Wofi]
+    C --> F[Swaync]
+    C --> G[Hyprland]
+    C --> H[Hyprlock]
+    C --> I[SDDM]
+```
+
+Fallback:
+
+`Wallpaper → awww → pywal → system UI`
 
 ---
 
-## Structure
+## 🖼️ Adding Wallpapers
 
-```
+1. Add images to `~/wallpapers/`
+2. Press `SUPER + W`
+3. Select wallpaper
+
+---
+
+## 📁 Structure
+
+```bash
 ~/
 ├── wallpapers/
-│   └── wallpaper.jpg
-└── .configs/
+└── .config/
     ├── hypr/
-    │   ├── hyprland.conf
-    │   ├── animations.conf
-    │   ├── hyprland-colors.conf
-    │   ├── hyprlock.conf
-    │   └── scripts/
-    │       ├── wallpaper-colors.sh   # pywal pipeline
-    │       ├── wal-watcher.sh        # awww change detector
-    │       ├── restore-wallpaper.sh  # startup restore
-    │       ├── matuwall-toggle.sh    # SUPER+W toggle
-    │       ├── hyprlock_wall.sh      # hyprlock sync
-    │       ├── sddm-colors.sh        # SDDM color sync
-    │       ├── volume-up/down/mute.sh
-    │       └── brightness-up/down.sh
-    ├── waybar/config + style.css
-    ├── wofi/config + style.css
-    ├── rofi/selector2.rasi + theme.rasi
-    ├── swaync
-    ├── wob/wob.ini
-    ├── matuwall/config.json
+    ├── waybar/
+    ├── wofi/
+    ├── rofi/
+    ├── swaync/
+    ├── wob/
+    ├── matuwall/
     ├── fastfetch/
-    │   │── images/
-    │   │   │──test.jpg 
-    │   │── config.jsonc
-    └── wal/templates/
-        ├── hyprland-colors.conf
-        ├── colors-wofi.css
-        ├── dunstrc
-        └── wob.ini
+    └── wal/
 ```
 
 ---
 
-## Credits
+## 📄 License
 
-- Wallpaper picker by [Matuwall](https://github.com/naurissteins/Matuwall)
-- Color pipeline powered by [pywal16](https://github.com/eylles/pywal16)
-- Wallpaper daemon by [awww](https://codeberg.org/LGFae/awww)
-- Installer structure inspired by [JaKooLit/Hyprland-Dots](https://github.com/JaKooLit/Hyprland-Dots)
-- swaync by 
+MIT License
 
 ---
 
-## License
-
-MIT — feel free to use, modify and share.
+**Made with ❤️ for the Hyprland community**
+⭐ Star the repo if you like it!
