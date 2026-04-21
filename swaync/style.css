@@ -1,78 +1,58 @@
+/* Use pywal's standard variables */
+@import "colors.css";
+
 * {
-font-family: "SF Pro Display", "JetBrainsMono Nerd Font";
-font-size: 13px;
-border: none;
+    font-family: "SF Pro Display", "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    border: none;
+    transition: all 0.25s ease;
 }
 
-/* BAR */
-
-window#waybar {
-    background: rgba(20, 20, 20, 0.6);
-    backdrop-filter: blur(20px);
+.notification-row {
+    background: var(--background);
+    border: 1px solid var(--color8);
     border-radius: 14px;
-    margin: 6px 10px;
-    padding: 8px 12px;
+    margin: 6px 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
 
-/* MODULES */
-
-#workspaces button {
-padding: 0 8px;
-border-radius: 10px;
-color: #ccc;
-transition: all 0.3s ease;
-margin: 0 4px;
+.notification {
+    background: var(--color0);
+    color: var(--foreground);
+    border: 1px solid var(--color1);
+    border-radius: 12px;
+    padding: 10px 14px;
 }
 
-#workspaces button.active {
-background: rgba(255, 255, 255, 0.2);
-color: white;
-box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+.control-center {
+    background: var(--background);
+    border: 1px solid var(--color8);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
 }
 
-#workspaces button:hover {
-background: rgba(255, 255, 255, 0.1);
-color: #fff;
+.title {
+    color: var(--foreground);
+    font-weight: 600;
 }
 
-/* CENTER CLOCK */
-
-#clock {
-font-weight: 600;
-color: white;
-margin: 0 10px;
+.button {
+    background: var(--color8);
+    color: var(--foreground);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 4px;
 }
 
-/* RIGHT SIDE */
-
-#pulseaudio,
-#network,
-#battery {
-padding: 0 10px;
-color: #ddd;
-transition: all 0.2s ease;
+.button:hover {
+    background: var(--color1);
+    color: var(--background);
 }
 
-/* HOVER */
-
-#pulseaudio:hover,
-#network:hover,
-#battery:hover {
-background: rgba(255, 255, 255, 0.15);
-border-radius: 10px;
-color: white;
+.toggle {
+    background: var(--color8);
 }
 
-/* ACTIVE/CRITICAL STATES */
-
-#battery.critical {
-color: #ff6b6b;
-}
-
-#network.disconnected {
-color: #ff8787;
-}
-
-#pulseaudio.muted {
-color: #888;
+.toggle:checked {
+    background: var(--color1);   /* or var(--color2) */
 }

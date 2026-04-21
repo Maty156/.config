@@ -24,8 +24,8 @@
 
   "widgets": [
     "title",
+    "dnd",
     "notifications",
-    "mpris",
     "buttons-grid"
   ],
 
