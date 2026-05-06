@@ -1,0 +1,95 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 32,
+
+    "modules-left": [
+        "custom/arch"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "cpu",
+        "memory",
+        "clock",
+        "mpris",
+        "pulseaudio",
+        "tray",
+        "custom/swaync"
+    ],
+
+    "custom/arch": {
+        "format": "",
+        "on-click": "wofi --show drun",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "󰲠",
+            "2": "󰲢",
+            "3": "󰲤",
+            "4": "󰲦",
+            "5": "󰲨",
+            "6": "󰲪",
+            "7": "󰲬",
+            "8": "󰲮",
+            "9": "󰲰",
+            "10": "󰿬",
+            "active": "󰮯",
+            "default": "󰊠",
+            "urgent": "󱨧"
+        },
+        "persistent-workspaces": {
+            "*": [1, 2, 3, 4]
+        },
+        "on-click": "activate",
+        "sort-by-number": true
+    },
+
+    "cpu": {
+        "format": " {usage}%",
+        "interval": 3
+    },
+
+    "memory": {
+        "format": " {percentage}%",
+        "interval": 5
+    },
+
+    "clock": {
+        "format": "{:%H:%M %a}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": ["", "", ""],
+        "on-click": "pavucontrol"
+    },
+
+    "mpris": {
+        "format": "{player_icon} {title}",
+        "format-paused": "{player_icon}  {title}",
+        "player-icons": {
+            "default": "🎵"
+        },
+        "max-length": 35
+    },
+
+    "custom/swaync": {
+        "format": " 󰂚 {}",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "return-type": "json",
+        "escape": true,
+        "interval": 5
+    }
+}
