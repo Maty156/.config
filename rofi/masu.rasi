@@ -1,0 +1,94 @@
+/**
+ * MASU Rofi Theme
+ * ~/.config/rofi/masu.rasi
+ */
+
+window {
+    background-color: #090915;
+    border-color:     #2a2a3a;
+    border:           1px;
+    border-radius:    18px;
+    width:            480px;
+    padding:          0px;
+    location:         center;
+    font:             "JetBrainsMono Nerd Font 13";
+}
+
+mainbox {
+    background-color: transparent;
+    padding:          16px 14px 14px 14px;
+    spacing:          10px;
+    children:         [ inputbar, listview ];
+}
+
+inputbar {
+    background-color: #0d0d1a;
+    border-color:     #1e1e2e;
+    border:           1px;
+    border-radius:    12px;
+    padding:          0px;
+    spacing:          0px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    background-color: transparent;
+    text-color:       #51788A;
+    font:             "JetBrainsMono Nerd Font 15";
+    padding:          10px 0px 10px 14px;
+    vertical-align:   0.5;
+}
+
+entry {
+    background-color:  transparent;
+    text-color:        #c1c1c4;
+    placeholder:       "Search apps...";
+    placeholder-color: #58586c;
+    padding:           10px 14px 10px 8px;
+    cursor:            text;
+}
+
+listview {
+    background-color: transparent;
+    lines:            7;
+    columns:          1;
+    spacing:          2px;
+    scrollbar:        false;
+    border:           0px;
+    margin:           4px 0px 0px 0px;
+}
+
+element {
+    background-color: transparent;
+    text-color:       #c1c1c4;
+    border-radius:    10px;
+    padding:          8px 12px;
+    spacing:          10px;
+    orientation:      horizontal;
+}
+
+element selected {
+    background-color: #0f1e21;
+    border-color:     #1e3d42;
+    border:           1px;
+    text-color:       #A0D8E1;
+}
+
+element-icon {
+    size:           26px;
+    vertical-align: 0.5;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    vertical-align:   0.5;
+    highlight:        bold;
+}
+
+error-message {
+    background-color: #090915;
+    text-color:       #8a8a9a;
+    padding:          16px;
+    border-radius:    12px;
+}
