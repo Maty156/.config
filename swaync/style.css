@@ -2,26 +2,40 @@
 @import "colors.css";
 
 * {
-    font-family: "SF Pro Display", "JetBrainsMono Nerd Font";
+    font-family: "SF Pro Display", "JetBrainsMono Nerd Font", system-ui, sans-serif;
     font-size: 13px;
     border: none;
     transition: all 0.25s ease;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
+
 .notification-row {
-    background: var(--background);
-    border: 1px solid var(--color8);
+    background: transparent;
+    border: none;
     border-radius: 14px;
-    margin: 6px 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    margin: 1px 0;
+    width: 100%;
+    box-shadow: none;
 }
 
 .notification {
-    background: var(--color0);
+    background: var(--background);
     color: var(--foreground);
-    border: 1px solid var(--color1);
+    border: 1px solid var(--color8);
+    box-shadow: none;
     border-radius: 12px;
     padding: 10px 14px;
+}
+
+.notification:hover,
+.notification:focus {
+    background: var(--background);
+    border-color: var(--color1);
 }
 
 .control-center {
