@@ -1,9 +1,9 @@
 :root {
-    --cc-bg: rgba(17, 17, 27, 0.8);
-    --noti-border-color: rgb(203, 166, 247);
-    --noti-bg: 30, 30, 46;
-    --noti-bg-alpha: 0.8;
-    --noti-bg-darker: rgb(38, 38, 38);
+    --cc-bg: var(--background);
+    --noti-border-color: var(--color1);
+    --noti-bg: var(--color0);
+    --noti-bg-alpha: 0.95;
+    --noti-bg-darker: var(--color8);
     --noti-bg-hover: rgba(56, 56, 56, 0.3);
     --noti-bg-focus: rgba(68, 68, 68, 0);
     --noti-close-bg: rgba(78, 78, 78, 0);
@@ -42,8 +42,8 @@
 @define-color text-color-disabled rgb(150, 150, 150);
 @define-color bg-selected rgb(0, 128, 255);
 
-notificationwindow, blankwindow, blankwindow {
-    background: transparent;
+notificationwindow, blankwindow {
+    background: var(--cc-bg);
 }
 
 .close-button {
@@ -69,23 +69,42 @@ notificationwindow, blankwindow, blankwindow {
 
 .notification-row {
     background: none;
-    outline: none;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
-.notification-row:focus {
-    background: var(--noti-bg-focus);
+.notification-row:hover,
+.notification-row:focus,
+.notification-row:focus-visible {
+    background: transparent !important;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 .notification-row .notification-background {
-    padding: 6px 12px;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border-radius: var(--border-radius);
+    box-shadow: none;
 }
 
 .notification-row .notification-background .notification {
     border-radius: var(--border-radius);
-    border: var(--border);
-    padding: 0;
+    border: 1px solid var(--color8);
+    padding: 10px 14px;
     transition: var(--hover-tranistion);
-    background: rgba(var(--noti-bg), var(--noti-bg-alpha));
+    background: var(--background);
+    box-shadow: none;
+}
+
+.notification-row .notification-background .notification:hover,
+.notification-row .notification-background .notification:focus {
+    background: var(--background);
+    box-shadow: none;
+    border-color: var(--color1);
 }
 
 .notification-row .notification-background .notification .notification-default-action {
@@ -195,7 +214,7 @@ notificationwindow, blankwindow, blankwindow {
     margin-bottom: 0px;
     margin-top: -15px;
     margin-left: -10px;
-    margin-right: -10px
+    margin-right: -10px;
 }
 
 .notification-group.collapsed .notification {
