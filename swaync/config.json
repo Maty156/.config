@@ -24,7 +24,7 @@
 
   "scripts": {
     "sound-script": {
-      "exec": "bash -c '$HOME/.config/swaync/sound.sh'",
+      "exec": "bash -c \"/home/matyas/.config/swaync/sound.sh\"",
       "run-on": "notification"
     }
   },
