@@ -1,0 +1,73 @@
+@import url("../../waybar/colors.css");
+
+:root {
+    --osd-bg: var(--background, rgba(10, 14, 20, 0.88));
+    --osd-border: var(--foreground, rgba(255, 255, 255, 0.08));
+    --osd-accent: var(--accent, #2aa198);
+    --osd-text: var(--foreground, #cdd6f4);
+}
+
+window#osd {
+    background-color: var(--osd-bg);
+    border-radius: 999px;
+    border: 1px solid var(--osd-border);
+    padding: 4px 10px;
+    min-width: 120px;
+    max-width: 180px;
+    min-height: 28px;
+    max-height: 28px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    color: var(--osd-text);
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 10px;
+}
+
+box, overlay, centerbox {
+    margin: 0;
+    padding: 0;
+    min-height: 0;
+}
+
+image {
+    color: var(--osd-accent);
+    min-width: 13px;
+    min-height: 13px;
+    -gtk-icon-size: 13px;
+    margin: 0 5px 0 0;
+}
+
+progressbar {
+    min-height: 2px;
+    max-height: 2px;
+    border-radius: 999px;
+    margin: 0;
+    padding: 0;
+}
+
+progressbar trough {
+    background-color: rgba(255, 255, 255, 0.10);
+    border-radius: 999px;
+    min-height: 2px;
+    max-height: 2px;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+progressbar progress {
+    background: var(--osd-accent);
+    border-radius: 999px;
+    min-height: 2px;
+    max-height: 2px;
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    color: var(--osd-text);
+    font-weight: 600;
+    font-size: 10px;
+    margin: 0 2px;
+    padding: 0;
+}
