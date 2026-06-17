@@ -1,0 +1,10 @@
+* {{
+    base: {background};
+    surface0: {color0};
+    surface1: {color8};
+    text: {foreground};
+    subtext: {color7};
+    sapphire: {color4};
+    selected: {color4};
+    selborder: {color6};
+}}

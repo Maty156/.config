@@ -1,0 +1,11 @@
+@define-color base {background};
+@define-color surface0 {color0};
+@define-color surface1 {color8};
+@define-color text {foreground};
+@define-color subtext {color7};
+@define-color sapphire {color4};
+@define-color sky {color6};
+@define-color blue {color4};
+@define-color green {color2};
+@define-color yellow {color3};
+@define-color red {color1};

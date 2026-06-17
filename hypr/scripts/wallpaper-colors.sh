@@ -11,7 +11,7 @@ SCRIPTS="$HOME/.config/hypr/scripts"
 wal -i "$WALLPAPER" -n -q
 
 [[ -f ~/.cache/wal/colors-waybar.css    ]] && cp ~/.cache/wal/colors-waybar.css    ~/.config/waybar/colors.css
-[[ -f ~/.cache/wal/colors-wofi.css      ]] && cp ~/.cache/wal/colors-wofi.css      ~/.config/wofi/style.css
+[[ -f ~/.cache/wal/colors-rofi.rasi     ]] && cp ~/.cache/wal/colors-rofi.rasi     ~/.config/rofi/colors-rofi.rasi
 [[ -f ~/.cache/wal/wob.ini              ]] && cp ~/.cache/wal/wob.ini              ~/.config/wob/wob.ini
 [[ -f ~/.cache/wal/dunstrc              ]] && cp ~/.cache/wal/dunstrc              ~/.config/dunst/dunstrc
 [[ -f ~/.cache/wal/hyprland-colors.conf ]] && cp ~/.cache/wal/hyprland-colors.conf ~/.config/hypr/hyprland-colors.conf
