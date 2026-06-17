@@ -1,7 +1,13 @@
+# Screenshots
+assets/screenshots/
+
+# Wallpapers
+wallpapers/
+
 # Pywal cache
 .cache/wal/
 
-# SwayNC cache
+# SwayNC generated css
 swaync/*.css
 
 # Temporary files
@@ -14,19 +20,12 @@ Thumbs.db
 .venv/
 venv/
 
-# Logs and temp
+# Logs
 *.log
-/tmp/
 
-# Large media files (if any)
-*.mp4
-*.mov
-
-# Hyprland specific
+# Hyprland logs
 hypr/hyprland.log
 
 # Editor files
 .vscode/
 .idea/
-
-wallpapers/
