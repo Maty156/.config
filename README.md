@@ -143,11 +143,6 @@ Screenshots of the setup are included below (in `assets/screenshots/`). Click an
 
   <img src="assets/screenshots/screenshot-20260607-194614.png" alt="Wallpaper changer" width="640" />
 
-How to add screenshots:
-
-1. Place images in `assets/screenshots/`.
-2. Recommended resolution: 1280×720 (or scaled down).
-3. Commit and push; the README will show them automatically.
 
 ## Contributing
 
