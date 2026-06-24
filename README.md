@@ -127,15 +127,15 @@ Or start the watcher directly for live updates:
 
 Screenshots of the setup are included below (in `assets/screenshots/`). Click any image to open the file. Images are shown at a reduced width for readability.
 
-- **Notification / Waybar:**
+- **Desktop / Waybar:**
 
   <img src="assets/screenshots/screenshot-20260624-194229.png" alt="Notification bar" width="640" />
 
-- **Rofi launcher:**
+- **Notification bar:**
 
   <img src="assets/screenshots/screenshot-20260607-194538.png" alt="Rofi launcher" width="640" />
 
-- **Wallpaper chooser (Matuwall thumbnails):**
+- **Rofi launcher:**
 
   <img src="assets/screenshots/screenshot-20260607-194602.png" alt="Matuwall wallpaper chooser" width="640" />
 
