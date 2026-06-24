@@ -129,7 +129,7 @@ Screenshots of the setup are included below (in `assets/screenshots/`). Click an
 
 - **Notification / Waybar:**
 
-  <img src="assets/screenshots/screenshot-20260607-194530.png" alt="Notification bar" width="640" />
+  <img src="assets/screenshots/screenshot-20260624-194229.png" alt="Notification bar" width="640" />
 
 - **Rofi launcher:**
 
